@@ -4,6 +4,8 @@
 
 Compared to Github-hosted runners, you have more control of hardware and operating system when you use self-hosted runners for your github actions. This repository showcases how to deploy this self-hosted runner in AWS's ECS by using container configuration. In order to run ECS in secure environment, you should also configure other AWS services such as VPC, subnets and internet gateways. This environment configuration has been already prepared in "infrastructure" terraform file which creates environment as following:
 
+![](infra.png)
+
 Note that although we can save secrets in Github secrets, I thought that AWS secrets manager is much safer. Therefore, all the secrets needed to run self-host runner including the environment variables defined below are saved in AWS secrets manager and self-host runner accesses these secrets while running.
 
 ## Steps to initiate self host runner
